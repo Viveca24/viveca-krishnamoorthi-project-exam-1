@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SpaceX - A microsite that shows information about the SpaceX past and upcoming launches and rockets">
+    <meta name="keywords"
+        content="spacex, space, launch, launches, rockets, falcon 9, falcon heavy, vehicles, microsite, front end development, exam, noroff">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/card.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="icon" href="icons/spacex.png">
+    <script src="https://kit.fontawesome.com/97417d1b53.js" crossorigin="anonymous"></script>
+    <title>ROCKETS - SPACEX</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <input id="navbar-toggle" type="checkbox">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/spacex-logo.png" alt="spacex navigation logo" class="logo">
+                </a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="launch.html">LAUNCHES</a></li>
+                <li><a href="rockets.html" class="active">ROCKETS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <label for="navbar-toggle" class="burger-menu"><span class="line"></span></label>
+        </nav>
+        <main class="rocket-main">
+            <section class="rocket-main_text">
+                <h2>ROCKETS</h2>
+                <p>SpaceX currently manufactures and operates the <span>Falcon 9 Full Thrust</span> family of
+                    medium-lift launch vehicles and the <span>Falcon Heavy</span> family of heavy-lift launch vehicles.
+                </p>
+                <div id="rockets"></div>
+            </section>
+        </main>
+        <footer>
+            <a href="#top" class="to-top-button"><i class="fas fa-chevron-circle-up"></i></a>
+            <div class="footer-logo">
+                <a href="https://spacex.com/"><img src="images/spacex-logo.png" alt="smaller spacex logo with link to the official website"></a>
+            </div>
+            <div class="footer-sitemap">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="launch.html">LAUNCHES</a>
+                <a href="rockets.html">ROCKETS</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="footer-socialmedia">
+                <a href="https://www.instagram.com/spacex/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/spacex"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/spacex"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com/spacenewsx/"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>This site has been designed and developed by student Viveca Krishnamoorthi as the submission for her
+                    first year exam at <b>Noroff School of technology and digital media</b> and is not affiliated with
+                    SpaceX in any way. </p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/rockets.js"></script>
+</body>
+
+</html>

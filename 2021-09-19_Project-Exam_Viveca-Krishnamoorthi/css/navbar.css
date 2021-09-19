@@ -1,0 +1,139 @@
+/* Responsive navigationbar INSPIRED BY https://www.youtube.com/watch?v=S-JyJCVx_4Y&ab_channel=MinzCode */
+
+nav {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 30px;
+  height: 100px;
+  background-color: black;
+  border-bottom: 1px solid rgb(9, 9, 9);
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 250px;
+  height: 100%;
+}
+nav .menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  float: right;
+  padding: 0;
+  margin: 0;
+  height: 100px;
+}
+nav .menu li {
+  list-style: none;
+  padding: 1em;
+}
+nav .menu a {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 18px;
+}
+nav .menu a:hover,
+.active {
+  border-bottom: 2px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+#navbar-toggle {
+  position: absolute;
+  top: -100px;
+}
+nav .burger-menu {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .burger-menu .line {
+  background-color: white;
+  display: block;
+  height: 4px;
+  width: 30px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  border-radius: 5px;
+}
+nav .burger-menu .line:before {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  border-radius: 5px;
+  top: 10px;
+}
+nav .burger-menu .line:after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  border-radius: 5px;
+  top: -10px;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    position: fixed;
+  }
+  nav .logo {
+    float: none;
+    width: 250px;
+    margin: auto;
+  }
+  nav .menu {
+    float: none;
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+    background-image: url(../images/galaxy.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  nav .menu a {
+    font-size: 1.3em;
+  }
+  nav :checked ~ .menu {
+    bottom: 0;
+  }
+  nav .burger-menu {
+    display: block;
+  }
+  nav :checked ~ .burger-menu .line {
+    background: transparent;
+  }
+  nav :checked ~ .burger-menu .line:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  nav :checked ~ .burger-menu .line:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+}

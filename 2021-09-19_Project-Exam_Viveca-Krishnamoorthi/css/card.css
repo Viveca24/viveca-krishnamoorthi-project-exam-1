@@ -1,0 +1,313 @@
+main {
+  width: 80%;
+  margin: 2em auto;
+  background-image: url(../images/starsky.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* ------ LAUNCH ------ */
+
+.launch-container {
+  display: flex;
+  margin-top: 1em;
+  background-image: url(../images/galaxy.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#upcoming-container {
+  margin-left: 4em;
+}
+#past-container {
+  margin-right: 4em;
+}
+#upcoming-container,
+#past-container {
+  background: transparent;
+  flex: 1;
+}
+#upcoming-launch,
+#past-launch {
+  overflow: scroll;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.769);
+}
+.launch-main_text h2 {
+  text-align: center;
+  font-size: 3.5em;
+}
+.launch-main_text {
+  text-align: center;
+  font-size: 1.2em;
+}
+/* launch card style */
+
+.launch-heading {
+  padding: 20px;
+  font-size: 1.5em;
+}
+.launch-card {
+  margin: 5% 7%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.082);
+  border-radius: 5px;
+}
+.launch-card p {
+  background: transparent;
+  padding: 5px;
+}
+details {
+  padding: 15px;
+}
+.flight-name {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.flight-number {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+.flight-date {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+.fa-rocket {
+  color: orange;
+}
+.fa-check {
+  color: green;
+}
+.fa-times {
+  color: red;
+}
+.error {
+  border: 1px solid darkred;
+  padding: 1rem;
+  color: darkred;
+  background: rgb(255, 0, 0, 0.1);
+}
+#upcoming-container {
+  margin: 40px;
+}
+#past-container {
+  margin: 40px;
+}
+
+/* ------ ROCKETS ------ */
+#rocket-container,
+.rocket-main_text {
+  width: 80%;
+  margin: 2em auto;
+}
+.rocket-main_text p {
+  background-color: black;
+  font-size: 1.1em;
+}
+.rocket-main_text span {
+  font-style: bold;
+}
+/* rocket card style */
+.rocket-card {
+  margin: 5%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.082);
+  border-radius: 1em;
+  width: 90%;
+}
+.rocket-card p {
+  background: transparent;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.rocket-box {
+  display: flex;
+}
+.rocket-description,
+.rocket-image {
+  flex: 1;
+}
+.rocket-image img {
+  width: 100%;
+  height: 80%;
+}
+.rocket-description_info,
+.rocket-text {
+  padding: 10px;
+}
+.rocket-description {
+  padding: 0 50px;
+}
+.rocket-description a:hover {
+  font-style: oblique;
+}
+.rocket-description_info h2 {
+  padding: 10px;
+  text-align: left;
+  font-size: 4.5em;
+}
+.rocket-text p {
+  padding: 5px;
+}
+.rocket-text p span {
+  float: right;
+  padding-right: 50px;
+}
+.space {
+  line-height: 2.5;
+}
+
+/* ---LOADER ---*/
+
+.loader {
+  border: 12px solid #b9b6dc;
+  border-top: 12px solid #585f79;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 0.3s linear infinite;
+  margin-left: 2rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Query Laptop */
+
+@media only screen and (min-width: 900px) and (max-width: 1368px) {
+  /* about */
+  .map iframe {
+    width: 60%;
+  }
+  /* launches */
+
+  #upcoming-container,
+  #past-container {
+    margin: 35px;
+  }
+  /* rocket */
+  #rocket-container,
+  .rocket-main_text {
+    width: 90%;
+    margin: 1em auto;
+  }
+  .rocket-description_info h2 {
+    font-size: 4em;
+  }
+  .rocket-image {
+    margin: 0px auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1334px) {
+  .rocket-box {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .rocket-text p span {
+    padding-right: 10px;
+  }
+  .rocket-image img {
+    width: 90%;
+    margin: 20px;
+  }
+}
+
+/* Tablet */
+
+@media only screen and (min-width: 476px) and (max-width: 899px) {
+  /* launches */
+  .launch-container {
+    flex-direction: column;
+  }
+  #upcoming-container,
+  #past-container {
+    margin: 15px;
+  }
+  #past-container h3 {
+    margin-top: 25px;
+  }
+
+  /* rocket */
+  #rocket-container,
+  .rocket-main_text {
+    width: 80%;
+    margin: 1em auto;
+  }
+  .rocket-description {
+    padding: 0 10px;
+  }
+  .rocket-description_info h2 {
+    font-size: 3em;
+  }
+  .rocket-box {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .rocket-text p span {
+    padding-right: 10px;
+  }
+  .rocket-image img {
+    width: 90%;
+    margin: 20px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 475px) {
+  /* launches */
+  .launch-container {
+    flex-direction: column;
+  }
+  #upcoming-container,
+  #past-container {
+    margin: 2px 2px 100px 2px;
+  }
+
+  /*rocket*/
+  .rocket-main {
+    width: 100%;
+  }
+  #rocket-container,
+  .rocket-main_text {
+    width: 80%;
+    margin: 2em auto;
+  }
+  .rocket-card {
+    margin: 3%;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.082);
+    border-radius: 1em;
+    width: 90%;
+  }
+  .rocket-description {
+    padding: 0 10px;
+  }
+  .rocket-description_info h2 {
+    font-size: 3em;
+  }
+  .rocket-box {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .rocket-text p span {
+    padding-right: 10px;
+  }
+  .rocket-text p {
+    font-size: 0.9em;
+  }
+
+  .rocket-image img {
+    width: 90%;
+    margin: 10px;
+  }
+}

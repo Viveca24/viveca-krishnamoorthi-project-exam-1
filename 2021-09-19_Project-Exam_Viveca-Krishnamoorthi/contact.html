@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="SpaceX - A microsite that shows information about the SpaceX past and upcoming launches and rockets">
+    <meta name="keywords"
+        content="spacex, launch, launches, contact, rocket, questions, feedback, question, microsite, front end development, exam, noroff">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/card.css">
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="icon" href="icons/spacex.png">
+    <script src="https://kit.fontawesome.com/97417d1b53.js" crossorigin="anonymous"></script>
+    <title>CONTACT US</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <input id="navbar-toggle" type="checkbox">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/spacex-logo.png" alt="spacex navigation logo" class="logo">
+                </a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="launch.html">LAUNCHES</a></li>
+                <li><a href="rockets.html">ROCKETS</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+            </ul>
+            <label for="navbar-toggle" class="burger-menu"><span class="line"></span></label>
+        </nav>
+        <main>
+            <section class="contact-main_text">
+                <h2>CONTACT US</h2>
+                <p>Do you have any questions or feedback for us? Feel free to contact us by filling out the contact form
+                    below.
+                </p>
+            </section>
+            <form id="contact-form">
+                <div>
+                    <label for="name">Full Name:</label>
+                    <div class="form-error" id="nameError">Must have at least 2 characters</div>
+                    <input id="name" placeholder="Please enter your full name" />
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <div class="form-error" id="emailError">Please enter a valid email address</div>
+                    <input id="email" placeholder="Please enter your email address" />
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <div class="form-error" id="messageError">Your message must have at least 10 characters</div>
+                    <textarea id="message"></textarea>
+                </div>
+                <div id="submit-message">
+                    <h4>Thanks! We will get back to you soon!</h4>
+                </div>
+                <div class="button-container">
+                    <button type="submit" id="submit-button">SUBMIT</button>
+                    <div class="button-background"></div>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <a href="#top" class="to-top-button"><i class="fas fa-chevron-circle-up"></i></a>
+            <div class="footer-logo">
+                <a href="https://spacex.com/"><img src="images/spacex-logo.png" alt="smaller spacex logo with link to the official website"></a>
+            </div>
+            <div class="footer-sitemap">
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="launch.html">LAUNCHES</a>
+                <a href="rockets.html">ROCKETS</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="footer-socialmedia">
+                <a href="https://www.instagram.com/spacex/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/spacex"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/spacex"><i class="fab fa-youtube"></i></a>
+                <a href="https://facebook.com/spacenewsx/"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>This site has been designed and developed by student Viveca Krishnamoorthi as the submission for her
+                    first year exam at <b>Noroff School of technology and digital media</b> and is not affiliated with
+                    SpaceX in any way. </p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/components/displayError.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
